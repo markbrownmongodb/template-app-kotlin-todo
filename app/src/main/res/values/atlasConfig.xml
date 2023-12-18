@@ -1,4 +1,9 @@
 <resources>
-  <string name="realm_app_id">PUT YOUR APP ID HERE</string>
-  <string name="realm_base_url">https://realm.mongodb.com</string>
+    <string name="realm_app_id">mobile-web-demo-nov23-dihvl</string>
+    <string name="realm_app_url">https://realm.mongodb.com/groups/5ead7a92758e00636bc31452/apps/6553e68d0b4e319d31ff1c4c</string>
+    <string name="realm_base_url">https://realm.mongodb.com</string>
+    <string name="realm_client_api_base_url">https://us-east-1.aws.realm.mongodb.com</string>
+    <string name="realm_data_api_base_url">https://us-east-1.aws.data.mongodb-api.com</string>
+    <string name="realm_data_explorer_link">https://cloud.mongodb.com/links/5ead7a92758e00636bc31452/explorer/RealmADS/database/collection/find</string>
+    <string name="realm_data_source_name">mongodb-atlas</string>
 </resources>

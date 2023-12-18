@@ -25,6 +25,18 @@ class ComposeLoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val intentExtra = getIntent();
+        val autoEmail = intentExtra.getStringExtra("username")
+        val autoPassword = intentExtra.getStringExtra("password")
+        val isAppetize = intentExtra.getBooleanExtra("isAppetize", false)
+
+        if (isAppetize && !autoEmail.isNullOrEmpty() && !autoPassword.isNullOrEmpty()) {
+            loginViewModel.setEmail(autoEmail)
+            loginViewModel.setPassword(autoPassword)
+            loginViewModel.switchToAction(LoginAction.LOGIN)
+            loginViewModel.login(autoEmail, autoPassword)
+        }
+
         // Fast-track task list screen if we are logged in
         if (app.currentUser != null) {
             startActivity(Intent(this, ComposeItemActivity::class.java))
